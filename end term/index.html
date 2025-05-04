@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>ArtGallery - Discover & Buy Original Art</title>
+    <!-- Bootstrap 4 CSS only -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet" type="text/css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f8f9fa;
+            --accent-color: #d4af37;
+        }
+        
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-section {
+            background-color: var(--secondary-color);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .artwork-card {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+            border: none;
+            border-radius: 0;
+        }
+
+        .artwork-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .artwork-img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .artist-name {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .artwork-price {
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .advisor-section {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .btn-outline-dark {
+            border-width: 2px;
+        }
+
+        .category-badge {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            margin: 0.25rem;
+            border-radius: 20px;
+            display: inline-block;
+        }
+
+        /* Simple responsive menu styles */
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                display: none;
+            }
+            .navbar-collapse.show {
+                display: block;
+            }
+            .navbar-toggler {
+                display: block;
+            }
+            .navbar-nav {
+                flex-direction: column;
+                width: 100%;
+            }
+            .navbar-nav .nav-item {
+                margin: 0.5rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ArtGallery</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home&nbsp;</a></li>
+                <li class="nav-item"><a class="nav-link" href="page 2.html">Paintings</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sculpture</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Digital Art</a></li>
+            </ul>
+            <ul class="navbar-nav">
+               <li class="nav-item"><a class="nav-link" href="login.html">Sign In</a></li>
+                    <li class="nav-item"><a class="btn btn-dark ml-2" href="login.html">Sell Art</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 mb-4">Discover Original Art by Emerging Artists</h1>
+            <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel" style="background-color: grey">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators1" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators1" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators1" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active"> <img src="images/WhatsApp Image 2025-04-27 at 20.34.18_255890c8.jpg" alt="First slide" width="100%" height="auto" class="d-block mx-auto img-fluid">
+                  <div class="carousel-caption">
+                    <h5>Discover new art</h5>
+                  </div>
+                </div>
+                <div class="carousel-item"> <img src="images/WhatsApp Image 2025-05-04 at 13.45.12_764256a6.jpg" alt="Second slide" width="100%" height="auto" class="d-block mx-auto img-fluid">
+                  <div class="carousel-caption">
+                    
+                    <h5>Browse curated collections</h5>
+                  </div>
+                </div>
+                <div class="carousel-item"> <img src="images/WhatsApp Image 2025-05-04 at 13.45.14_82afae62.jpg" alt="Third slide" width="100%" height="auto" class="d-block mx-auto img-fluid">
+                  <div class="carousel-caption">
+               
+                    <h5>&nbsp;Find your perfect artwork</h5>
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev" href="#carouselExampleIndicators1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carouselExampleIndicators1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div><br>
+<br>
+          <h2>Find the perfect piece for your space from thousands of artworks</h2>
+		  <br>
+          <div class="row">
+              <div class="col-lg-4">
+                <div class="card col-md-4 col-lg-12"> <img class="card-img-top" src="images/Screenshot 2025-05-04 145515.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Explore mural artworks&nbsp;</h5>
+                    <p class="card-text">&nbsp;</p>
+                  <a href="#" class="btn btn-primary">See More&nbsp;</a> </div>
+                </div>
+            </div>
+              <div class="col-lg-4">
+                <div class="card col-md-4 col-lg-12"> <img class="card-img-top" src="images/Screenshot 2025-05-04 145657.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Explore commision works&nbsp;</h5>
+                    <p class="card-text">&nbsp;</p>
+                    <a href="#" class="btn btn-primary">See More&nbsp;</a> </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="card col-md-4 col-lg-12"> <img class="card-img-top" src="images/Screenshot 2025-05-04 145859.png" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Explore customizations&nbsp;</h5>
+                    <p class="card-text">&nbsp;</p>
+                    <a href="#" class="btn btn-primary">See more&nbsp;</a> </div>
+                </div>
+              </div>
+          </div><br><br>
+          <div class="d-flex justify-content-center"><br>
+          <a href="page 2.html" class="btn btn-dark btn-lg mr-3">Shop Art</a>
+          <a href="#" class="btn btn-outline-dark btn-lg">Meet Our Artists</a>
+      </div>
+        </div>
+    </section>
+    <div id="accordion1" role="tablist">
+      <div class="card">
+        <div class="card-header" role="tab" id="headingOne1">
+          <h5 class="mb-0"> <a data-toggle="collapse" href="#collapseOne1" role="button" aria-expanded="true" aria-controls="collapseOne1"> Our Mission&nbsp;&nbsp; </a> </h5>
+        </div>
+        <div id="collapseOne1" class="collapse show" role="tabpanel" aria-labelledby="headingOne1" data-parent="#accordion1">
+          <div class="card-body">Our mission is to provide a vibrant and inclusive platform where artists from all backgrounds can showcase their work, connect with audiences, and gain the recognition they deserve. We aim to celebrate creativity, foster artistic growth, and make art more accessible to everyone by bridging the gap between emerging talent and the world.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingTwo1">
+          <h5 class="mb-0"> <a class="collapsed" data-toggle="collapse" href="#collapseTwo1" role="button" aria-expanded="false" aria-controls="collapseTwo1"> Events&nbsp; </a> </h5>
+        </div>
+        <div id="collapseTwo1" class="collapse" role="tabpanel" aria-labelledby="headingTwo1" data-parent="#accordion1">
+          <div class="card-body">Our events section is dedicated to highlighting the vibrant pulse of the creative community. From exhibitions and gallery openings to performances and collaborative workshops, we showcase events that celebrate artistic expression and foster real-world connections between artists and their audiences. Stay informed, get inspired, and be part of the experiences that shape the art world.</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" role="tab" id="headingThree1">
+          <h5 class="mb-0"> <a class="collapsed" data-toggle="collapse" href="#collapseThree1" role="button" aria-expanded="false" aria-controls="collapseThree1"> News&nbsp; </a> </h5>
+        </div>
+        <div id="collapseThree1" class="collapse" role="tabpanel" aria-labelledby="headingThree1" data-parent="#accordion1">
+          <div class="card-body">Our news section keeps you connected to the heartbeat of the art world. From artist spotlights and exhibition announcements to industry insights and creative trends, we deliver timely updates that inform, inspire, and celebrate the ever-evolving landscape of art and culture. Whether you're an artist or an enthusiast, stay in the loop with stories that matter.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Featured Categories -->
+    
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-4">Browse by Category</h2>
+          <div class="d-flex flex-wrap justify-content-center">
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Abstract</span>
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Landscape</span>
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Portrait</span>
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Street Art</span>
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Contemporary</span>
+                <span class="category-badge mr-2 mb-2 btn-outline-dark">Pop Art</span>
+          </div>
+        </div>
+    </section>
+
+    <!-- Featured Artworks -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Featured Artworks</h2>
+            <div class="row">
+                <!-- Artwork Cards -->
+                <div class="col-md-4">
+                    <div class="card artwork-card">
+                        <img src="images/Screenshot 2025-05-04 165526.png" class="card-img-top artwork-img" alt="Artwork">
+                        <div class="card-body">
+                          <h5 class="card-title">Abstract Harmony</h5>
+                            <p class="artist-name">by Afnan Shora</p>
+                            <p class="artwork-price">$250</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card artwork-card">
+                        <img src="images/Screenshot 2025-05-04 165125.png" class="card-img-top artwork-img" alt="Artwork">
+                        <div class="card-body">
+                          <h5 class="card-title">Landscape</h5>
+                            <p class="artist-name">by Afnan Shora</p>
+                            <p class="artwork-price">$180</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card artwork-card">
+                        <img src="images/Screenshot 2025-05-04 165947.png" class="card-img-top artwork-img" alt="Artwork">
+                        <div class="card-body">
+                          <h5 class="card-title">Modern Miniature</h5>
+                            <p class="artist-name">by Afnan Shora&nbsp;</p>
+                            <p class="artwork-price">$20</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Art Advisory Section -->
+    <section class="advisor-section">
+        <div class="container text-center">
+            <h2 class="mb-4">Work with an Art Advisor</h2>
+            <p class="lead mb-4">Let our expert art advisors help you find the perfect piece for your space</p>
+            <a href="#" class="btn btn-light btn-lg">Get Free Art Advisory</a>
+        </div>
+    </section>
+
+    <!-- Artist Spotlight -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">More to explore&nbsp;</h2>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <img src="images/Screenshot 2025-05-04 170420.png" alt="Artist" width="100%" height="auto"><br>
+ <br>
+                    <h5>Buy Art you love</h5>
+                    <h5>&nbsp;</h5>
+<p class="text-muted">&nbsp;</p>
+                </div>
+                <div class="col-md-3 text-center">
+                  <img src="images/Screenshot 2025-05-04 170442.png" alt="Artist" width="100%" height="auto">  <br>
+                <br> 
+					<h5>Collector Stories</h5>
+                    <p class="text-muted">&nbsp;</p>
+                </div>
+                <div class="col-md-3 text-center">
+                  <img src="images/Screenshot 2025-05-04 170506.png" alt="Artist" width="100%" height="auto">  <br>
+                     <br> 
+					<h5>25 Artists to Collect&nbsp; &nbsp; &nbsp;in 2025</h5>
+                    <p class="text-muted">&nbsp;</p>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img src="images/Screenshot 2025-05-04 171207.png" alt="Artist" width="100%" height="auto">  <br>
+                     <br> 
+					<h5>Art for Your Style</h5>
+                    <p class="text-muted">&nbsp;</p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-light py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Our Story</a></li>
+                        <li><a href="#" class="text-dark">Press</a></li>
+                        <li><a href="#" class="text-dark">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">FAQ</a></li>
+                        <li><a href="#" class="text-dark">Shipping</a></li>
+                        <li><a href="#" class="text-dark">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Artists</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Sell Your Art</a></li>
+                        <li><a href="#" class="text-dark">Artist Guide</a></li>
+                        <li><a href="#" class="text-dark">Artist Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Instagram</a></li>
+                        <li><a href="#" class="text-dark">Facebook</a></li>
+                        <li><a href="#" class="text-dark">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2025 ArtGallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

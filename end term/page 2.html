@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New This Week | Art Gallery</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f8f9fa;
+            --accent-color: #d4af37;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            color: var(--primary-color);
+        }
+
+        /* Navigation Styles */
+        .navbar {
+            padding: 1rem 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .nav-link {
+            color: var(--primary-color) !important;
+            font-weight: 500;
+        }
+
+        /* Header Styles */
+        .page-header {
+            padding: 4rem 0;
+            background-color: var(--secondary-color);
+        }
+
+        /* Filter Styles */
+        .filter-section {
+            border-bottom: 1px solid #dee2e6;
+            padding: 1rem 0;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            margin-right: 1rem;
+            border: 1px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            border-radius: 0;
+        }
+
+        /* Artwork Grid Styles */
+        .artwork-card {
+            margin-bottom: 2rem;
+            border: none;
+        }
+
+        .artwork-card img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            transition: opacity 0.3s ease;
+        }
+
+        .artwork-card:hover img {
+            opacity: 0.9;
+        }
+
+        .artwork-info {
+            padding: 1rem 0;
+        }
+
+        .artwork-price {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .prints-price {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        /* Pagination Styles */
+        .load-more-btn {
+            padding: 1rem 3rem;
+            border: 2px solid var(--primary-color);
+            background: white;
+            color: var(--primary-color);
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .load-more-btn:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ArtGallery</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home&nbsp;</a></li>
+                    <li class="nav-item"><a class="nav-link" href="page 2.html">Paintings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Sculpture</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Digital Art</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link" href="login.html">Sign In</a></li>
+                    <li class="nav-item"><a class="btn btn-dark ml-2" href="login.html">Sell Art</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header mt-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 mb-3">New This Week</h1>
+                    <p class="lead">Our Chief Curator searched to bring you the best. See the standout new works she uncovered this week.</p>
+                </div>
+                <div class="col-lg-4 text-lg-right">
+                    <p class="mb-0">100 Artworks curated by</p>
+                    <h5>Afnan Shora&nbsp;</h5>
+                    <p class="text-muted">Chief Curator and VP, Art Advisory</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section">
+        <div class="container">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light embed-responsive"> <a class="navbar-brand" href="#">&nbsp;</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1" aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"> </li>
+                <li class="nav-item"> </li>
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Category&nbsp; </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Watercolour </a> <a class="dropdown-item" href="#">Acrylics</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Digital</a></div>
+                </li>
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Range&nbsp; </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Under 500$</a> <a class="dropdown-item" href="#">Under 1000$</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Under 2000$</a></div>
+                </li>
+                <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Size&nbsp; </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown1"> <a class="dropdown-item" href="#">Small</a> <a class="dropdown-item" href="#">Medium</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Large</a> </div>
+                </li>
+                <li class="nav-item"> </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+             
+              
+              </form>
+            </div>
+          </nav>
+        </div>
+        </div>
+    </section>
+
+    <!-- Artwork Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Artwork 1 -->
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.26.59_e1523a58.jpg" alt="Growth">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">Growth</h5>
+                            <p class="text-muted mb-2">Paintings, 31.5 W x 47.2 H x 1.6 D in</p>
+                            <p class="mb-2">France</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$1,390</span>
+                                <span class="prints-price">Prints from $40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 2 -->
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.27.00_85df86e1.jpg" alt="Untitled">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">Untitled</h5>
+                            <p class="text-muted mb-2">Paintings, 15.7 W x 22.4 H x 0.1 D in</p>
+                            <p class="mb-2">Sweden</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$8,750</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Artwork 3 -->
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.27.00_371473e4.jpg" alt="Orchid">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">Orchid</h5>
+                            <p class="text-muted mb-2">Paintings, 11.8 W x 16.5 H x 0.1 D in</p>
+                            <p class="mb-2">Italy</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$2,740</span>
+                                <span class="prints-price">Prints from $40</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More Artworks (6 total) -->
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.27.00_e045535b.jpg" alt="Bloom">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">Bloom</h5>
+                            <p class="text-muted mb-2">Paintings, 18 W x 24 H x 1.5 D in</p>
+                            <p class="mb-2">United States</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$3,260</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.27.01_13711be5.jpg" alt="Line">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">Line</h5>
+                            <p class="text-muted mb-2">Sculpture, 5.1 W x 18.9 H x 5.1 D in</p>
+                            <p class="mb-2">Serbia</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$3,850</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="artwork-card">
+                        <img src="images/WhatsApp Image 2025-05-04 at 21.27.36_37d3cb57.jpg" alt="NEBULA 2">
+                        <div class="artwork-info">
+                          <h5 class="mb-1">NEBULA 2</h5>
+                            <p class="text-muted mb-2">Printmaking, 22 W x 29.9 H x 0.1 D in</p>
+                            <p class="mb-2">Portugal</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="artwork-price">$1,800</span>
+                                <span class="prints-price">Prints from $51</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="load-more-btn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+<footer class="bg-light py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h5>About Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Our Story</a></li>
+                        <li><a href="#" class="text-dark">Press</a></li>
+                        <li><a href="#" class="text-dark">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">FAQ</a></li>
+                        <li><a href="#" class="text-dark">Shipping</a></li>
+                        <li><a href="#" class="text-dark">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Artists</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Sell Your Art</a></li>
+                        <li><a href="#" class="text-dark">Artist Guide</a></li>
+                        <li><a href="#" class="text-dark">Artist Login</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-dark">Instagram</a></li>
+                        <li><a href="#" class="text-dark">Facebook</a></li>
+                        <li><a href="#" class="text-dark">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p>&copy; 2024 ArtGallery. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap-4.4.1.js"></script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Art Gallery</title>
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --secondary-color: #f8f9fa;
+            --accent-color: #d4af37;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--secondary-color);
+            padding-top: 76px;
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .login-container {
+            max-width: 400px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .form-control {
+            border-radius: 0;
+            padding: 0.75rem 1rem;
+            border: 1px solid #dee2e6;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: none;
+        }
+
+        .btn-dark {
+            border-radius: 0;
+            padding: 0.75rem 2rem;
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 1.5rem 0;
+            position: relative;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #dee2e6;
+            z-index: 1;
+        }
+
+        .divider span {
+            background: white;
+            padding: 0 1rem;
+            color: #6c757d;
+            position: relative;
+            z-index: 2;
+        }
+
+        .social-login .btn {
+            width: 100%;
+            margin-bottom: 1rem;
+            border-radius: 0;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">ArtGallery</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Artists</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form -->
+    <div class="container">
+        <div class="login-container">
+            <h2 class="text-center mb-4">Sign In</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+                </div>
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="remember">
+                        <label class="custom-control-label" for="remember">Remember me</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-dark mb-3">Sign In</button>
+                <div class="text-right mb-3">
+                    <a href="#" class="text-dark">Forgot password?</a>
+                </div>
+            </form>
+
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+
+            <div class="social-login">
+                <button class="btn btn-outline-secondary">
+                    <img src="images/Screenshot 2025-05-04 215758.png" alt="Google" width="51" height="47">
+                    Sign in with Google
+                </button>
+                <button class="btn btn-outline-secondary">
+                    <img src="images/Screenshot 2025-05-04 220147.png" alt="Facebook" width="47" height="42" class="mr-3">
+                    Sign in with Facebook
+                </button>
+            </div>
+
+            <p class="text-center mt-4 mb-0">
+                Don't have an account? <a href="#" class="text-dark font-weight-bold">Sign up</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Bootstrap 4 Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
